@@ -23,5 +23,6 @@ public interface MyBoardService {
 	
 	//게시물 삭제 - 실제 삭제 발생
 	public boolean removeBoard(long bno);
+	
 
 }

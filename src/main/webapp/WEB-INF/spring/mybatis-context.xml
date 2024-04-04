@@ -30,10 +30,11 @@
 		<property name="dataSource" ref="dataSource"/>
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:com/spring/mypro00/mapper/MyBoardMaper.xml</value>
+				<value>classpath:com/spring/mypro00/mapper/MyBoardMapper.xml</value>
 			</list>
 		</property>
 	</bean>
+	
 <!-- 4. mybatis-spring연동(SqlSessionFacrotyBean 빈 주입 받음) -->
 <!-- SqlSessionFacroty보다 쓰레드에 안전 -->
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">

@@ -24,6 +24,7 @@
 	<!-- 자동 빈 등록 -->
 	<!-- 명시된 패키지의 클래스들 중, @Service 어노테이션이 적용된 클래스만 자동으로 빈으로 등록된다. -->
 	<context:component-scan base-package="com.spring.mypro00.service" />
+	<context:component-scan base-package="com.spring.mypro00.controller" />
 	
 	
 	

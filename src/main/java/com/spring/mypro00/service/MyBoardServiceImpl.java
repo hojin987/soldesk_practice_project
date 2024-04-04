@@ -7,14 +7,15 @@ import org.springframework.stereotype.Service;
 import com.spring.mypro00.domain.MyBoardVO;
 import com.spring.mypro00.mapper.MyBoardMapper;
 
-import lombok.AllArgsConstructor;
-
 @Service
-@AllArgsConstructor
 public class MyBoardServiceImpl implements MyBoardService {
 	
 	//매퍼 인터페이스 주입
 	private MyBoardMapper myBoardMapper;
+	
+	public MyBoardServiceImpl(MyBoardMapper myBoardMapper) {
+		this.myBoardMapper = myBoardMapper;
+	}
 	
 	//게시물 목록 조회 서비스
 	@Override
@@ -60,8 +61,5 @@ public class MyBoardServiceImpl implements MyBoardService {
 	public boolean removeBoard(long bno) {
 		return myBoardMapper.deleteMyBoard(bno) == 1;
 	}
-	
-	
-	
 	
 }
